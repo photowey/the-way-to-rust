@@ -70,4 +70,6 @@ fn datatype() {
     datatype::numeric_operation();
     datatype::boolean();
     datatype::character();
+    datatype::tuple();
+    datatype::array();
 }
