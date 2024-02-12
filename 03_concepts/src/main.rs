@@ -15,6 +15,7 @@
  */
 
 mod datatype;
+mod function;
 mod keywords;
 mod shadowing;
 
@@ -31,6 +32,8 @@ fn main() {
     shadowing();
 
     datatype();
+
+    function();
 }
 
 fn keywords() {
@@ -72,4 +75,8 @@ fn datatype() {
     datatype::character();
     datatype::tuple();
     datatype::array();
+}
+
+fn function() {
+    function::function();
 }
