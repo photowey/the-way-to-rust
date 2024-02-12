@@ -178,17 +178,19 @@ pub fn array() {
     array_define_type();
     array_define_same_value();
     array_accessing();
-    array_invalid_accessing();
+
+    // array_invalid_accessing();
+
     println!("----------------------------------------------------------------:array");
 }
 
-pub fn array_define() {
+fn array_define() {
     let a = [1, 2, 3, 4, 5];
 
     println!("The value of array.a is: {:?}", a);
 }
 
-pub fn array_months() {
+fn array_months() {
     let months = [
         "January",
         "February",
@@ -207,27 +209,28 @@ pub fn array_months() {
     println!("The value of array.months is: {:?}", months);
 }
 
-pub fn array_define_type() {
+fn array_define_type() {
     // i32
     let a: [i32; 5] = [1, 2, 3, 4, 5];
 
     println!("The value of array.a is: {:?}", a);
 }
 
-pub fn array_define_same_value() {
+fn array_define_same_value() {
     let a = [3; 5];
 
     println!("The value of array.a is: {:?}", a);
 }
 
-pub fn array_accessing() {
+fn array_accessing() {
     let a = [1, 2, 3, 4, 5];
 
     println!("The first value of array.a is: {:?}", a[0]);
     println!("The second value of array.a is: {:?}", a[1]);
 }
 
-pub fn array_invalid_accessing() {
+#[warn(dead_code)]
+fn array_invalid_accessing() {
     let a = [1, 2, 3, 4, 5];
     println!("Please enter an array index.");
 

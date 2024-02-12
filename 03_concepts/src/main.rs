@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+mod controlflow;
 mod datatype;
 mod function;
 mod keywords;
@@ -34,6 +35,8 @@ fn main() {
     datatype();
 
     function();
+
+    control_flow();
 }
 
 fn keywords() {
@@ -79,4 +82,8 @@ fn datatype() {
 
 fn function() {
     function::function();
+}
+
+fn control_flow() {
+    controlflow::control_flow();
 }
