@@ -29,5 +29,7 @@ fn main() {
 }
 
 fn scope() {
-    scope::scope()
+    scope::scope();
+    scope::type_string();
+    scope::ownership_function();
 }
