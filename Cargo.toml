@@ -1,3 +1,9 @@
 [workspace]
 
-members = ["01_helloworld", "02_guessing_game", "03_concepts", "04_ownership"]
+members = [
+    "01_helloworld",
+    "02_guessing_game",
+    "03_concepts",
+    "04_ownership",
+    "05_struct"
+]
