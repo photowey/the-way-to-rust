@@ -1,6 +1,6 @@
 [workspace]
 
-members = [
+members = ["00_macros",
     "01_helloworld",
     "02_guessing_game",
     "03_concepts",
