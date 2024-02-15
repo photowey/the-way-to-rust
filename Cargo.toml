@@ -6,4 +6,4 @@ members = ["00_macros",
     "03_concepts",
     "04_ownership", "05_rectangles",
     "05_struct"
-]
+    , "06_enums"]
