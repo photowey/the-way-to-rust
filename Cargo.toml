@@ -10,5 +10,6 @@ members = [
     "05_struct",
     "06_enums",
     "07_backyard",
-    "07_crates"
-]
+    "07_crates",
+    "07_restaurant"
+    , "07_restaurant_multi"]
