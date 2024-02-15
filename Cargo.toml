@@ -4,6 +4,6 @@ members = ["00_macros",
     "01_helloworld",
     "02_guessing_game",
     "03_concepts",
-    "04_ownership",
+    "04_ownership", "05_rectangles",
     "05_struct"
 ]

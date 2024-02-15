@@ -14,12 +14,10 @@
  * limitations under the License.
  */
 
-mod structfn;
-
-fn main() {
-    strut_fn();
-}
-
-fn strut_fn() {
-    structfn::strut_fn();
+#[derive(Debug)]
+pub struct User {
+    pub username: String,
+    pub email: String,
+    pub active: bool,
+    pub sign_in_count: u64,
 }
