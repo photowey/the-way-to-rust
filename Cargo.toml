@@ -11,4 +11,4 @@ members = [
     "07_backyard", "07_crates", "07_restaurant", "07_restaurant_multi",
     "08_collections",
     "09_errors",
-    "10_generics", "10_trait"]
+    "10_generics", "10_lifetimes", "10_trait"]
