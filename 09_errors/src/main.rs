@@ -14,6 +14,12 @@
  * limitations under the License.
  */
 
+mod errors;
+
 fn main() {
-    println!("Hello, world!");
+    errors();
+}
+
+fn errors() {
+    errors::errors();
 }
