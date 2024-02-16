@@ -14,6 +14,18 @@
  * limitations under the License.
  */
 
+mod generics;
+mod structee;
+
 fn main() {
-    println!("Hello, world!");
+    generics();
+    struct_generics();
+}
+
+fn generics() {
+    generics::generics();
+}
+
+fn struct_generics() {
+    structee::struct_generics();
 }
