@@ -37,7 +37,7 @@ struct MixedPoint<T, U> {
 }
 
 impl<T, U> MixedPoint<T, U> {
-    fn mixup<T, U>(self, other: MixedPoint<T, U>) -> MixedPoint<T, U> {
+    fn mixup<V, W>(self, other: MixedPoint<V, W>) -> MixedPoint<T, W> {
         MixedPoint {
             x: self.x,
             y: other.y,

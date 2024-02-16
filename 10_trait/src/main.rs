@@ -14,6 +14,12 @@
  * limitations under the License.
  */
 
+mod traits;
+
 fn main() {
-    println!("Hello, world!");
+    traits();
+}
+
+fn traits() {
+    traits::traits();
 }
