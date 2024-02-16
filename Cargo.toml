@@ -9,4 +9,7 @@ members = [
     "05_rectangles", "05_struct",
     "06_enums",
     "07_backyard", "07_crates", "07_restaurant", "07_restaurant_multi",
-    "08_collections", "09_errors"]
+    "08_collections",
+    "09_errors",
+    "10_generics"
+]
