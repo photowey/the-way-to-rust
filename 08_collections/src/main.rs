@@ -14,6 +14,24 @@
  * limitations under the License.
  */
 
+mod hashmap;
+mod stringz;
+mod vector;
+
 fn main() {
-    println!("Hello, world!");
+    vector();
+    string();
+    hashmap();
+}
+
+fn vector() {
+    vector::vector();
+}
+
+fn string() {
+    stringz::string();
+}
+
+fn hashmap() {
+    hashmap::hashmap();
 }
