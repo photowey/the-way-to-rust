@@ -14,6 +14,16 @@
  * limitations under the License.
  */
 
+mod lifetimes;
+
+// Lifetimes are another kind of generic that we’ve already been using.
+// Rather than ensuring that a type has the behavior we want,
+// lifetimes ensure that references are valid as long as we need them to be.
+
 fn main() {
-    println!("Hello, world!");
+    lifetimes();
+}
+
+fn lifetimes() {
+    lifetimes::lifetimes();
 }
