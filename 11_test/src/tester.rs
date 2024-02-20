@@ -14,12 +14,6 @@
  * limitations under the License.
  */
 
-mod tester;
-
-fn main() {
-    tester();
-}
-
-fn tester() {
-    tester::tester()
+pub fn tester() {
+    println!("Hello, test!");
 }
