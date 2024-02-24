@@ -1,7 +1,8 @@
 [workspace]
+resolver = "2"
 
 members = [
-    "00_macros",
+    "00_macros", "00_moviers",
     "01_helloworld",
     "02_guessing_game",
     "03_concepts",
@@ -11,4 +12,6 @@ members = [
     "07_backyard", "07_crates", "07_restaurant", "07_restaurant_multi",
     "08_collections",
     "09_errors",
-    "10_generics", "10_lifetimes", "10_trait", "11_adder", "11_test", "12_minigrep"]
+    "10_generics", "10_lifetimes", "10_trait",
+    "11_adder", "11_test",
+    "12_minigrep"]
