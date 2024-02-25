@@ -16,12 +16,14 @@
 
 // ----------------------------------------------------------------
 
+#[allow(dead_code)]
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
 }
 
+#[allow(dead_code)]
 impl Rectangle {
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
@@ -31,6 +33,7 @@ impl Rectangle {
 
 // ----------------------------------------------------------------
 
+#[allow(dead_code)]
 pub struct Guess {
     value: i32,
 }
@@ -94,12 +97,13 @@ pub fn greeting(name: &str) -> String {
     format!("Hello {}!", name)
 }
 
-pub fn greeting_bug(name: &str) -> String {
+pub fn greeting_bug(_name: &str) -> String {
     String::from("Hello!")
 }
 
 // ----------------------------------------------------------------
 
+#[allow(dead_code)]
 fn prints_and_returns_10(a: i32) -> i32 {
     println!("I got the value {}", a);
     10

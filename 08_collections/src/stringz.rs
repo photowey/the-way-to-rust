@@ -43,34 +43,34 @@ pub fn string() {
 }
 
 pub fn string_simple() {
-    let mut s = String::new();
+    let mut _s = String::new();
 }
 
 pub fn string_to_string() {
     let data = "initial contents";
-    let s = data.to_string();
+    let _s = data.to_string();
     // the method also works on a literal directly:
-    let s = "initial contents".to_string();
+    let _s = "initial contents".to_string();
 }
 
 pub fn string_from() {
-    let s = String::from("initial contents");
+    let _s = String::from("initial contents");
 }
 
 // ----------------------------------------------------------------
 
 pub fn string_unicode() {
-    let hello = String::from("السلام عليكم");
-    let hello = String::from("Dobrý den");
-    let hello = String::from("Hello");
-    let hello = String::from("שָׁלוֹם");
-    let hello = String::from("नमस्ते");
-    let hello = String::from("こんにちは");
-    let hello = String::from("안녕하세요");
-    let hello = String::from("你好");
-    let hello = String::from("Olá");
-    let hello = String::from("Здравствуйте");
-    let hello = String::from("Hola");
+    let _hello = String::from("السلام عليكم");
+    let _hello = String::from("Dobrý den");
+    let _hello = String::from("Hello");
+    let _hello = String::from("שָׁלוֹם");
+    let _hello = String::from("नमस्ते");
+    let _hello = String::from("こんにちは");
+    let _hello = String::from("안녕하세요");
+    let _hello = String::from("你好");
+    let _hello = String::from("Olá");
+    let _hello = String::from("Здравствуйте");
+    let _hello = String::from("Hola");
 }
 
 // ----------------------------------------------------------------
@@ -126,15 +126,15 @@ pub fn string_combine_v2() {
 // ----------------------------------------------------------------
 
 pub fn string_index() {
-    let s1 = String::from("hello");
+    let _s1 = String::from("hello");
     // ^ `String` cannot be indexed by `{integer}`
     // let h = s1[0];
 }
 
 pub fn string_wrapper_vec() {
-    let hello1 = String::from("Hola");
-    let hello2 = String::from("Здравствуйте");
-    let hello3 = "Здравствуйте";
+    let _hello1 = String::from("Hola");
+    let _hello2 = String::from("Здравствуйте");
+    let _hello3 = "Здравствуйте";
 
     //  ^ string indices are ranges of `usize`
     // let answer = &hello3[0];

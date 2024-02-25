@@ -67,11 +67,13 @@ impl Summary for Tweet {
 
 // ----------------------------------------------------------------
 
+#[allow(dead_code)]
 pub struct Pair<T> {
     x: T,
     y: T,
 }
 
+#[allow(dead_code)]
 impl<T> Pair<T> {
     fn new(x: T, y: T) -> Self {
         Self { x, y }
@@ -79,6 +81,7 @@ impl<T> Pair<T> {
 }
 
 impl<T: Display + PartialOrd> Pair<T> {
+    #[allow(dead_code)]
     fn cmp_display(&self) {
         if self.x >= self.y {
             println!("The largest member is x = {}", self.x);
@@ -114,11 +117,11 @@ pub fn notify_generic_bounds<T: Summary + Display>(item: &T) {
     println!("Breaking news! {}", item.summarize());
 }
 
-pub fn some_function<T: Display + Clone, U: Clone + Debug>(t: &T, u: &U) -> i32 {
+pub fn some_function<T: Display + Clone, U: Clone + Debug>(_t: &T, _u: &U) -> i32 {
     1
 }
 
-pub fn some_function_bounds<T, U>(t: &T, u: &U) -> i32
+pub fn some_function_bounds<T, U>(_t: &T, _u: &U) -> i32
 where
     T: Display + Clone,
     U: Clone + Debug,

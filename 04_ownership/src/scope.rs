@@ -85,6 +85,7 @@ fn type_string_move() {
     */
 }
 
+#[allow(dead_code)]
 fn type_string_clone() {
     let s1 = String::from("hello");
     let s2 = s1.clone();
@@ -242,7 +243,7 @@ fn take_references_function_reference_and_change() {
     mut_change(&mut s_mut);
 }
 
-fn change(some_string: &String) {
+fn change(_some_string: &String) {
     // `some_string` is a `&` reference, so the data it refers to cannot be borrowed as mutable
     // some_string.push_str(", world");
 }
@@ -268,7 +269,7 @@ fn take_references_function_handle_data_race() {
     println!("The value of r2 is: {r2}");
 }
 
-#[warn(unused_mut)]
+#[allow(unused_mut)]
 fn take_references_function_handle_data_race_big_problem() {
     // let mut s = String::from("hello");
     let s = String::from("hello");
@@ -362,6 +363,7 @@ fn take_references_string_slice() {
     println!("The value of s[6..11] is: {world}");
 }
 
+#[allow(dead_code)]
 fn first_word_string_slice(s: &String) -> &str {
     let bytes = s.as_bytes();
     for (i, &item) in bytes.iter().enumerate() {

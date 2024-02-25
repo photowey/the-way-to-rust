@@ -155,7 +155,7 @@ pub fn tuple_define() {
 pub fn tuple_destructure() {
     let tup = (500, 6.4, 1);
 
-    let (x, y, z) = tup;
+    let (_x, y, _z) = tup;
     println!("The value of y is: {y}")
 }
 
@@ -229,7 +229,7 @@ fn array_accessing() {
     println!("The second value of array.a is: {:?}", a[1]);
 }
 
-#[warn(dead_code)]
+#[allow(dead_code)]
 fn array_invalid_accessing() {
     let a = [1, 2, 3, 4, 5];
     println!("Please enter an array index.");

@@ -98,7 +98,7 @@ fn vector_enum_multi() {
         Text(String),
     }
 
-    let row = vec![
+    let _row = vec![
         SpreadsheetCell::Int(3),
         SpreadsheetCell::Text(String::from("blue")),
         SpreadsheetCell::Float(10.12),
@@ -107,7 +107,7 @@ fn vector_enum_multi() {
 
 fn vector_drop() {
     {
-        let v = vec![1, 2, 3, 4];
+        let _v = vec![1, 2, 3, 4];
 
         // do stuff with v
     } // <- v goes out of scope and is freed here

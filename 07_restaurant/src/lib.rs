@@ -30,6 +30,7 @@ crate
 
 use crate::front_of_house::hosting;
 
+#[allow(dead_code)]
 mod front_of_house {
     // Note: `pub`
     pub mod hosting {
@@ -38,6 +39,7 @@ mod front_of_house {
         fn seat_at_table() {}
     }
 
+    #[allow(dead_code)]
     mod serving {
         fn take_order() {}
 
@@ -49,8 +51,10 @@ mod front_of_house {
 
 // ----------------------------------------------------------------
 
+#[allow(dead_code)]
 fn deliver_order() {}
 
+#[allow(dead_code)]
 mod back_of_house {
     pub enum Appetizer {
         Soup,
@@ -107,6 +111,7 @@ pub fn eat_at_restaurant() {
 
 // ----------------------------------------------------------------
 
+#[allow(dead_code)]
 mod customer {
     // use crate::front_of_house::hosting;
     use crate::front_of_house::hosting::add_to_waitlist;

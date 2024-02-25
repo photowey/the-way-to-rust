@@ -14,4 +14,4 @@ members = [
     "09_errors",
     "10_generics", "10_lifetimes", "10_trait",
     "11_adder", "11_test",
-    "12_minigrep"]
+    "12_minigrep", "13_functional"]

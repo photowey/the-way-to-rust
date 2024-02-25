@@ -54,13 +54,18 @@ pub enum UsState {
 // ----------------------------------------------------------------
 //@formatter:off
 
+#[allow(dead_code)]
 struct QuitMessage; // unit struct
+
+#[allow(dead_code)]
 struct MoveMessage {
     x: i32,
     y: i32,
 }
 
+#[allow(dead_code)]
 struct WriteMessage(String); // tuple struct
+#[allow(dead_code)]
 struct ChangeColorMessage(i32, i32, i32); // tuple struct
 
 //@formatter:on

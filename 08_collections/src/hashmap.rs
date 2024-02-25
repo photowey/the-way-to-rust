@@ -50,9 +50,8 @@ fn hashmap_accessing() {
     println!("The value of score is: {score}")
 }
 
+#[allow(dead_code)]
 fn hashmap_iterating() {
-    use std::collections::HashMap;
-
     let mut scores = HashMap::new();
 
     scores.insert(String::from("Blue"), 10);

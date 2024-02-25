@@ -18,10 +18,12 @@
 
 use std::fmt::Display;
 
+#[allow(dead_code)]
 struct ImportantExcerpt<'a> {
     part: &'a str,
 }
 
+#[allow(dead_code)]
 impl<'a> ImportantExcerpt<'a> {
     fn level(&self) -> i32 {
         3
@@ -123,7 +125,7 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     }
 }
 
-fn longest_x<'a>(x: &'a str, y: &str) -> &'a str {
+fn longest_x<'a>(x: &'a str, _y: &str) -> &'a str {
     x
 }
 
@@ -171,7 +173,7 @@ fn lifetimes_different_scope_v3() {
 fn lifetimes_struct() {
     let novel = String::from("Call me Ishmael. Some years ago...");
     let first_sentence = novel.split('.').next().expect("Could not find a '.'");
-    let i = ImportantExcerpt {
+    let _i = ImportantExcerpt {
         part: first_sentence,
     };
 }
@@ -198,16 +200,16 @@ This third rule makes methods much nicer to read and write because fewer symbols
 fn lifetimes_elision() {
     let my_string = String::from("hello world");
     // first_word works on slices of `String`s
-    let word = first_word(&my_string[..]);
+    let _word = first_word(&my_string[..]);
 
     let my_string_literal = "hello world";
 
     // first_word works on slices of string literals
-    let word = first_word(&my_string_literal[..]);
+    let _word = first_word(&my_string_literal[..]);
 
     // Because string literals *are* string slices already,
     // this works too, without the slice syntax!
-    let word = first_word(my_string_literal);
+    let _word = first_word(my_string_literal);
 }
 
 fn first_word(s: &str) -> &str {

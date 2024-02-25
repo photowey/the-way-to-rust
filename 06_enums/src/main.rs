@@ -37,15 +37,15 @@ fn main() {
 }
 
 fn v1() {
-    let four = IpAddrKind::V4;
-    let six = IpAddrKind::V6;
+    let _four = IpAddrKind::V4;
+    let _six = IpAddrKind::V6;
 
-    let home = IpAddr {
+    let _home = IpAddr {
         kind: IpAddrKind::V4,
         address: String::from("127.0.0.1"),
     };
 
-    let loopback = IpAddr {
+    let _loopback = IpAddr {
         kind: IpAddrKind::V6,
         address: String::from("::1"),
     };
@@ -57,9 +57,9 @@ fn v2() {
         V6(String),
     }
 
-    let home = IpAddr::V4(String::from("127.0.0.1"));
+    let _home = IpAddr::V4(String::from("127.0.0.1"));
 
-    let loopback = IpAddr::V6(String::from("::1"));
+    let _loopback = IpAddr::V6(String::from("::1"));
 }
 
 fn v3() {
@@ -68,9 +68,9 @@ fn v3() {
         V6(String),
     }
 
-    let home = IpAddr::V4(127, 0, 0, 1);
+    let _home = IpAddr::V4(127, 0, 0, 1);
 
-    let loopback = IpAddr::V6(String::from("::1"));
+    let _loopback = IpAddr::V6(String::from("::1"));
 }
 
 fn v4() {
@@ -91,8 +91,8 @@ fn v6() {
     }
 
     let five = Some(5);
-    let six = plus_one(five);
-    let none = plus_one(None);
+    let _six = plus_one(five);
+    let _none = plus_one(None);
 }
 
 fn v7() {
@@ -137,24 +137,26 @@ fn match_if_let() {
     }
 }
 
+#[allow(unused_assignments)]
 fn match_coin() {
-    let mut count = 0;
+    let mut _count = 0;
 
     let coin = Coin::Penny;
     match coin {
         Coin::Quarter(state) => println!("State quarter from {:?}!", state),
-        _ => count += 1,
+        _ => _count += 1,
     }
 }
 
+#[allow(unused_assignments)]
 fn if_let_coin() {
-    let mut count = 0;
+    let mut _count = 0;
 
     let coin = Coin::Quarter(UsState::Alabama);
     if let Coin::Quarter(state) = coin {
         println!("State quarter from {:?}!", state);
     } else {
-        count += 1;
+        _count += 1;
     }
 }
 
@@ -179,6 +181,6 @@ fn add_fancy_hat() {}
 
 fn remove_fancy_hat() {}
 
-fn move_player(num_spaces: u8) {}
+fn move_player(_num_spaces: u8) {}
 
 fn reroll() {}

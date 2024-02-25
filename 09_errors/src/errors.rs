@@ -61,7 +61,7 @@ fn errors_panic_code_bug() {
 }
 
 fn errors_result() {
-    let greeting_file_result = File::open("hello.txt");
+    let _greeting_file_result = File::open("hello.txt");
 
     /*
     let greeting_file = match greeting_file_result {
@@ -72,7 +72,7 @@ fn errors_result() {
 }
 
 fn errors_result_handle_err() {
-    let greeting_file_result = File::open("hello.txt");
+    let _greeting_file_result = File::open("hello.txt");
 
     /*
     let greeting_file = match greeting_file_result {
@@ -105,21 +105,21 @@ fn errors_result_unwrap_or_else() {
 }
 
 fn errors_result_shortcut_unwrap() {
-    let greeting_file = File::open("hello.txt").unwrap();
+    let _greeting_file = File::open("hello.txt").unwrap();
 }
 
 fn errors_result_shortcut_expect() {
-    let greeting_file =
+    let _greeting_file =
         File::open("hello.txt").expect("hello.txt should be included in this project");
 }
 
 fn errors_result_shortcut_propagating() {
-    read_username_from_file();
+    let _ = read_username_from_file();
 
-    read_username_from_file_shortcut();
-    read_username_from_file_shortcut_chain();
+    let _ = read_username_from_file_shortcut();
+    let _ = read_username_from_file_shortcut_chain();
 
-    read_username_from_file_fs();
+    let _ = read_username_from_file_fs();
 }
 
 fn read_username_from_file() -> Result<String, io::Error> {
@@ -159,12 +159,14 @@ fn read_username_from_file_fs() -> Result<String, io::Error> {
 
 // ----------------------------------------------------------------
 
+#[allow(dead_code)]
 fn last_char_of_first_line(text: &str) -> Option<char> {
     text.lines().next()?.chars().last()
 }
 
+#[allow(dead_code)]
 fn option_shortcut() -> Result<(), Box<dyn Error>> {
-    let greeting_file = File::open("hello.txt")?;
+    let _greeting_file = File::open("hello.txt")?;
 
     Ok(())
 }

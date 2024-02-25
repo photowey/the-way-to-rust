@@ -80,7 +80,7 @@ fn control_flow_let_if() {
     */
 }
 
-#[warn(dead_code)]
+#[allow(dead_code)]
 fn control_flow_loop() {
     // dangerous
     loop {

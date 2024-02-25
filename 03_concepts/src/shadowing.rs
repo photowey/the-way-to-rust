@@ -33,7 +33,7 @@ pub fn shadowing_spaces() {
     println!("The value of spaces is: {spaces}");
 }
 
-#[warn(unused_mut)]
+#[allow(unused_mut)]
 pub fn mut_spaces() {
     // 5
     let mut spaces = "     ";

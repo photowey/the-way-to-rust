@@ -16,12 +16,16 @@
 # limitations under the License.
 #
 
+# single binary project
+# package == binary
 if [ -z "$1" ]; then
     echo "Usage: $0 <rust_workspace_member_name> [additional_args]"
     exit 1
 fi
 
-WORKSPACE_MEMBER="$1"
+WORKSPACE_PACKAGE="$1"
+WORKSPACE_BINARY="$WORKSPACE_MEMBER"
+
 shift
 
 RUST_OPTIONS=""
@@ -30,4 +34,4 @@ while [ -n "$1" ]; do
     shift
 done
 
-cargo run --package "$WORKSPACE_MEMBER" --bin "$WORKSPACE_MEMBER" "$RUST_OPTIONS"
+cargo run --package "$WORKSPACE_PACKAGE" --bin "$WORKSPACE_BINARY" "$RUST_OPTIONS"

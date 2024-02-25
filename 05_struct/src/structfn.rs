@@ -20,6 +20,7 @@ struct Color(i32, i32, i32);
 
 struct Point(i32, i32, i32);
 
+#[allow(dead_code)]
 struct AlwaysEqual;
 
 pub fn strut_fn() {

@@ -81,5 +81,5 @@
 /// * `virtual`
 /// * `yield`
 ///
-#[warn(dead_code)]
+#[allow(dead_code)]
 pub fn rust_keywords() {}
